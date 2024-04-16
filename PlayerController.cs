@@ -81,6 +81,7 @@ public class PlayerControls : MonoBehaviour
                 Destroy(gameObject);
                 SceneManager.LoadScene("Game Over");
 
+
             }else{
                 
                 lives--;

@@ -15,6 +15,6 @@ public class ShowScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        change.text = FishScript.level.ToString();
+        change.text = "Score: " + FishScript.level.ToString();
     }
 }

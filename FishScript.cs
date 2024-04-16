@@ -37,4 +37,12 @@ public class FishScript : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(x, y, z);
     }
+    private void OnCollisionEnter(Collision other)
+    {
+    
+        if(other.gameObject.tag == "Trash"){
+            Destroy(other.gameObject);
+        }
+
+    }
 }
