@@ -6,12 +6,7 @@ using UnityEngine.UI;
 public class ShowScore : MonoBehaviour
 {
     public Text change;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {

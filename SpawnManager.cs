@@ -15,7 +15,9 @@ public class SpawnManagerX : MonoBehaviour
 
     void Start(){
 
+        
         for(int i = 0; i < numberOfFishToSpawn; i++){
+            //Spawns random fish prefab
             int randomIndex = Random.Range(0, fishPrefabs.Length);
             GameObject randomFishPrefab = fishPrefabs[randomIndex];
             Instantiate(randomFishPrefab, GenerateSpawnPosition(), randomFishPrefab.transform.rotation);
@@ -24,6 +26,7 @@ public class SpawnManagerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // respawns enemy when there is none left
         enemyCount = GameObject.FindGameObjectsWithTag("Trash").Length;
         if (enemyCount == 0)
         {

@@ -24,6 +24,7 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame  
     void Update()
     {
+        //Makes rotation not change
         if (objectTransform.rotation != Quaternion.Euler(-90f, 0f, 0f))
         {
             objectTransform.rotation = Quaternion.Euler(-90f, 0f, 0f);
@@ -31,6 +32,7 @@ public class PlayerControls : MonoBehaviour
         if(transform.rotation != Quaternion.Euler(-90f, 0f, 0f)){
              objectTransform.rotation = Quaternion.Euler(-90f, 0f, 0f);
         }
+        //Sets Boundaries 
         if(transform.position.x < -xRange){
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
@@ -52,7 +54,7 @@ public class PlayerControls : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
         transform.Translate(Vector3.down * verticalInput * Time.deltaTime * speed);
-
+        //Rotates player depending on input
         if (horizontalInput > 0)
         {
             transform.rotation = Quaternion.Euler(-90, 90f, 0f);
@@ -80,7 +82,6 @@ public class PlayerControls : MonoBehaviour
             if(lives == 0){
                 Destroy(gameObject);
                 SceneManager.LoadScene("Game Over");
-
 
             }else{
                 
